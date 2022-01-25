@@ -1,9 +1,4 @@
-- 213 error fixed
-- Fix(sql): tinyint
-- Tempfix(client/main.lua)
-- Moved Notification Event for Inventory Wipe
-- Updated all events to the new RegisterNetEvent and got rid of unneeded handlers
-- Whatsapp Messages fix
-- Update fxmanifest.lua
-- Added Discord rich
-- Added QBCore doc
+- Açlık ve susuzluk süresi arttırıldı.
+- Yakıt süresi arttırıldı.
+- Bazı notifyler değiştirildi.
+- Araç testi diğer güncellemeye kadar kaldırıldı.
