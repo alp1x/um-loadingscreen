@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: none;
+    height: 100vh;
+    
+}
+
+.hics-intro{
+    border-radius: 20px;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: #171717;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.intro-img{
+    width: 10vw;
+}
+
+.intro-h1{
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.intro-link{
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.verify-span{
+    color: green;
+}
+
+
+.hics-intro::after{
+    content: "";
+    width: 50px;
+    height: 4px;
+    border-radius: 30px;
+    background:white;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    animation: going 2s linear infinite;
+}
+
+.hics-intro::before{
+    content: "";
+    width: 50px;
+    height: 4px;
+    border-radius: 30px;
+    background:white;
+    position: absolute;
+    left: 0;
+    top: 90%;
+    animation: going 2.5s linear infinite; 
+}
+
+
+
+@keyframes going{
+0% {left:0;}
+100% {left: 95%;}
+}
+
+
+.intro-verify{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-verify > h3{
+    margin-top: 30px;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    
+}
+
+
+.intro-verify .intro-fingerprint{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background:url("./img/fingerprint.png");
+    background-size:200px;
+    background-position: center center;
+}
+
+.intro-verify .intro-fingerprint::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./img/fingerprint2.png");
+    background-size:200px;
+    animation: introanimation 4s infinite ease-in-out;
+}
+
+@keyframes introanimation{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+}
+
+.intro-verify .intro-fingerprint::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #0A02A0;
+    border-radius: 10px;
+    filter:drop-shadow(0 0 15px #0A02A0) drop-shadow(0 0 40px #0A02A0);
+    animation: introanimationline 4s infinite ease-in-out;
+}
+
+@keyframes introanimationline{
+    0%,100%
+    {
+        top: 0%;
+    }
+    50%
+    {
+        top: 100%;
+    }
+}
+
+
+.cityhall-main-container{
+    border-radius: 20px;
+    position: relative;
+    background-position: center center;
+    backface-visibility: hidden;
+    width: 140vh; /* If you change this needs to change all "Size1" (search this) */
+    height: 70vh;
+    margin: 0 auto;
+    top: 15vh;
+    background-size: cover;
+    background-color: rgba(10, 10, 10, 1);
+    background-image: url("./img/background.png"); /* If you change this url you need to change it in app.js also */
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.226);
+    z-index: 99;
+}
+
+
+.cityhall-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 10vh;
+    color: #0A02A0;
+    /* background: whitesmoke; --Original */
+    background: #000000
+    border-radius: 20px 20px 0 0;
+}
+
+.header-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title > img{
+    width: 8vh;
+}
+/* .header-title > h1{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    margin-left: 10px;
+    
+} */
+
+
+.cityhall-option-blocks {
+    position: relative;
+    height: 33vh;
+    width: 65vh;
+    margin: 0 auto;
+    top: 13vh;
+    border-radius: 1vh;
+    /*background: rgba(37, 37, 37, 0.418)*/
+    
+}
+
+.cityhall-identity-page {
+    display: none;
+    position: relative;
+    height: 60vh; /* Same of cityhall-main-container -10vh (cityhall-header height) Size1*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cityhall-job-page {
+    display: none;
+    position: relative;
+    height: 60vh; /* -10vh of full */
+    width: 100%;
+    margin: 0 auto;
+    top: 0vh;
+    border-radius: 1vh;
+
+}
+
+.cityhall-option-block { /* First 2 icon */
+    position: relative;
+    width: 30vh;
+    height: 30vh;
+    display: inline-block;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+    left: 1vh;
+    top: 1vh;
+    text-align: center;
+    border-bottom: 6px solid rgba(255, 255, 255, 0);
+    transition: all 0.2s linear;
+    border-radius: 1vh;
+}
+
+.cityhall-option-block:hover {
+    border-bottom: 9px solid #0A02A0;
+    opacity: 0.9;
+}
+
+.cityhall-option-block > i {
+    font-size: 16vh;
+    line-height: 21vh;
+    color: #0A02A0;
+}
+
+.cityhall-option-block > p {
+    color: #171717;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1vh;
+    font-size: 2.6vh;
+}
+
+.identity-page-blocks {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding: 1vh;
+}
+
+.identity-page-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background: #2873A7;
+    transition: all 0.1s ease-in-out;
+    border-radius: 0.5vh;
+    margin: 0 5px;
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0); */
+}
+
+.identity-page-block:hover {
+    background: whitesmoke;
+    transition: ease-in 0.3s;
+}
+
+.identity-page-block > p:hover {
+    color: #2873A7;
+    transition: ease-in 0.3s;
+}
+
+.identity-page-block > p {
+    position: relative;
+    text-align: center;
+    line-height: 2vh;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1vh;
+    color: whitesmoke;
+    font-size: 1.6vh;
+}
+
+.identity-details{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Appear on click */
+    width: 95%;
+    height: 30vh;
+    padding: 10px;
+}
+
+.identity-details > img{
+    margin-left: 6%;
+    margin-right: 3%;
+}
+
+.identity-details-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    color: white;
+    padding-left: 50px;
+}
+
+.identity-name{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px; 
+    margin-top:0;
+}
+
+.identity-description{
+    font-family: 'opensans', sans-serif;
+    max-width: 70%;
+    font-size: 20px;
+}
+
+
+
+
+
+
+.hover-description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1vh;
+    margin: 4vh;
+    background: rgba(34, 34, 34, 0.75);
+    border-radius: 1vh;
+}
+
+.hover-description > p {
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3vh;
+}
+
+.identity-selected {
+    border-bottom: 0px solid #fff;
+    border-left: 0.5vh solid whitesmoke;
+}
+
+.request-identity-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3vh;
+    right: 0;
+    margin: 1vh;
+    width: 20vh;
+    height: 10%;
+    background: #28A745;
+    transition: all .5s ease-in-out;
+    border-radius: 0.5vh;
+    text-align: center;
+}
+
+.request-identity-button > p {
+    color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6vh;
+    font-weight: 400;
+    line-height: 2vh;
+    letter-spacing: 0.05vh;
+}
+
+.request-identity-button:hover{
+    background: #31cc55;
+    border-left: 0.5vh solid #218638;
+}
+
+
+
+
+.job-page-blocks {
+    position: relative;
+    padding: 1vh;
+    padding-right: 2vh;
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 17vh 17vh 17vh 17vh 17vh;
+    column-gap: 1.5vh;
+    row-gap: 1.5vh;
+}
+
+.job-page-block {
+    width: 100%;
+    height: 5vh;
+    background: #2873A7;
+    border-radius: 0.5vh;
+    transition: all 0.1s ease-in-out;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    
+}
+
+.job-page-block:hover {
+    background: whitesmoke;
+}
+
+.job-page-block > p:hover {
+    color: #2873A7;
+}
+
+.job-page-block > p {
+    position: relative;
+    text-align: center;
+    line-height: 2.5vh;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1vh;
+    color: whitesmoke;
+    font-size: 1.6vh;
+}
+
+.apply-job-button {
+    display: none;
+    position: absolute;
+    bottom: 1vh;
+    right: 0;
+    margin: 1vh;
+    width: 20vh;
+    height: 5vh;
+    background: #28A745;
+    border-radius: 0.5vh;
+}
+
+.apply-job-button:hover {
+    background: #28A745;
+}
+
+.apply-job-button > p {
+    color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 1vh;
+    letter-spacing: 0.05vh;
+}
+
+.job-selected {
+    border-left: 0.5vh solid whitesmoke;
+}
+
+:root{--percentage:0; --percentage2:0;}
+
+.job-stats{
+    color: white;
+    font-family: "poppins", sans-serif;
+
+}
+
+.job-graphic-stats{
+    width: 10vw;
+    height: 5vw;
+    margin-right: 90px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* border: 1px solid rebeccapurple; */
+    margin-bottom: 4vw;
+
+}
+
+.stats1title{
+    position: absolute;
+    top: 2vw;
+    left:25%;
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 30px;
+ 
+}
+.stats2title{
+    position: absolute;
+    top: 11vw;
+    left:25%;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 30px;
+ 
+}
+
+.job-graphic-stats::after{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10vw;
+    height: 10vw;
+    border: 40px solid;
+    border-color: white white var(--fill) var(--fill);
+    border-radius: 50%;
+    transform: rotate( calc(1deg * ( -45 + var(--value) * 1.8 ) ) );
+    animation: fillAnimation 2s 1;
+}
+
+@keyframes fillAnimation{
+    0%{transform: rotate(-45deg);}
+    5%{transform: rotate(135deg);}
+}
+
+
+.job-details{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+   
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Appear on click */
+    width: 95%;
+    height: 30vh;
+    padding: 10px;
+}
+
+.job-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.job-image{
+    margin-left: 6%;
+    margin-right: 3%;
+    width: 10vw;
+}
+
+.job-details-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    color: white;
+}
+
+.job-name{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px; 
+    margin-top:3vh;
+}
+
+.job-description{
+    font-family: 'opensans', sans-serif;
+    max-width: 70%;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+.back-to-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1vh;
+    width: 20vh;
+    height: 10%;
+    background: #dc143c;
+    border-radius: 0.5vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.back-to-main > p {
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 1vh;
+    letter-spacing: 0.05vh;
+}
+
+.back-to-main:hover{
+    background: #f81643;
+    border-left: 0.5vh solid #8f1029;
+}

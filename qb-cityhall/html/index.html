@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>QB Cityhall</title>
+</head>
+    <body>
+        <div class="container">
+            
+            <div class="cityhall-main-container">
+                <div class="hics-intro">
+                    <img class="intro-img" src="./img/cityhall.png">
+                    <h1 class="intro-h1">City Hall</h1>
+                    <p class="intro-link">Click here to <span class="verify-span">verify</span></p>
+                </div>
+                <div class="cityhall-header">
+                    <div class="header-title">
+                        <img src="./img/crp-cityhall.png">
+                    </div>
+    
+                    
+                </div>
+
+                <div class="cityhall-option-blocks" style="text-align: center;">
+                    <div class="cityhall-option-block" style="background-color: #ededed" data-page="identity"><i class="far fa-id-card"></i><p>Identity</p></div>
+                    <div class="cityhall-option-block" style="background-color: #ededed" data-page="job"><i class="fas fa-briefcase"></i><p>Employment</p></div>
+                </div>
+
+                <div class="cityhall-identity-page">
+                    <div class="identity-page-blocks"></div> <!-- Licences -->
+                    <div class="identity-details">
+                        <img class="identity-image" src="./img/basic.png">
+                        <div class="identity-details-desc">
+                            <h1 class="identity-name"></h1>
+                            <p class="identity-description"></p>
+                        </div>
+                    </div> 
+
+        
+                    <div class="hover-description"></div>
+                    <div class="request-identity-button"></div> <!-- Buy -->
+                    <div class="back-to-main"><p>Back</p></div> <!-- Back -->
+                </div>
+
+                <div class="cityhall-job-page">
+                    <div class="job-page-blocks"><!-- <div class="job-page-block" data-job="trucker"><p>Trucker</p></div> // DEBUG--></div>
+                    <div class="job-details">
+                        <div class="job-stats">
+                           <div class="job-graphic-stats stats1" style="--value: var(--percentage); --fill:orange;"></div>
+                           <p class="stats1title">HARD</p>
+                           <div class="job-graphic-stats stats2" style="--value: var(--percentage2); --fill:red;"></div>
+                           <p class="stats2title">HEAVY</p>
+                        </div>
+                        <div class="job-icon">
+                            <img class="job-image" src="./img/basic.png">
+                            <div class="job-details-desc">
+                                <h1 class="job-name"></h1>
+                                <p class="job-description"></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="apply-job-button"><p>Apply</p></div>
+                    <div class="back-to-main"><p>Back</p></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./app.js"></script>
+</html>
